@@ -3,7 +3,14 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "baseUrl": "./",
+    "paths": {
+      "@page/*": [ "app/page/*" ],
+      "@service/*": [ "app/service/*" ],
+      "@router/*": [ "app/app-routing/*" ]
+    }
+
   },
   "exclude": [
     "src/test.ts",
