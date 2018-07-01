@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from '../page/container/index/index.component';
@@ -8,7 +9,6 @@ import { HomeComponent } from '../page/container/home/home.component';
 // 导入路由文件
 import { AppRoutingModule } from '@router/app-routing.module';
 
-console.log( AppRoutingModule );
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ console.log( AppRoutingModule );
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(AppRoutingModule.routes,),
   ],
   providers: [],
   bootstrap: [AppComponent]
