@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from '../page/container/index/index.component';
@@ -17,6 +18,7 @@ import { AppRoutingModule } from '@router/app-routing.module';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     RouterModule.forRoot(AppRoutingModule.routes,),
   ],
   providers: [],

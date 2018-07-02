@@ -8,6 +8,7 @@ import { IndexComponent } from "@page/container/index/index.component";
 const appRoutes: Routes = [
  { path: 'index', component: IndexComponent },
  { path: "home", component: HomeComponent },
+ { path: "shop", loadChildren: "@page/container/shop/shop.module#ShopModule" },
  { path: "", redirectTo: 'index', pathMatch: "full" } 
 ];
 
