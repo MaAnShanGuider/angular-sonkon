@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
-import {  Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { HomeComponent } from "@page/container/home/home.component";
-import { IndexComponent } from "@page/container/index/index.component";
-
 const appRoutes: Routes = [
- { path: 'index', component: IndexComponent },
- { path: "home", component: HomeComponent },
- { path: "shop", loadChildren: "@page/container/shop/shop.module#ShopModule" },
- { path: "", redirectTo: 'index', pathMatch: "full" } 
+	{ path: '', loadChildren: "@page/container/index/index.module#IndexModule" },
+	{ path: '', loadChildren: "@page/container/home/home.module#HomeModule" },
+
+	{ path: "", redirectTo: '', pathMatch: "full" } 
 ];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  declarations: []
+  declarations: [],
+  exports: [
+  	RouterModule
+  ]
 })
 
 
 export class AppRoutingModule { 
-  static routes: Routes = appRoutes;
 }
 
