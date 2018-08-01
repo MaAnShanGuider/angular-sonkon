@@ -4,7 +4,7 @@ import { IndexComponent } from './index.component';
 
 const routes: Routes = [
 	{path: "index", component: IndexComponent},
-	{ path: "", redirectTo: 'index', pathMatch: "full" } 
+
 ];
 
 @NgModule({
